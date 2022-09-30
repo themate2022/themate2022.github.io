@@ -7,19 +7,20 @@
 	<title>THE MATE MOCKUP PAGE</title>
 	<link href="./css/main.css" rel="styleSheet"/>
 	<script src="./js/main.js"></script>
+	<script src="./js/ajax.js"></script>
 </head>
 <body>
 <div class="wrapper">
 	<div class="header">
-		<div class="logo">
+		<div class="logo" onclick="importPage('/')">
 			<div class="logo-img">logo</div>
 			<h2>Themate</h2>
 		</div>
 		<div class="nav">
 			<ul>
-				<li><a href="#">Tour Course</a></li>
-				<li><a href="#">Tour Mate</a></li>
-				<li><a href="#">Content</a></li>
+				<li><a href="#" class="nav-btn" onclick="importPage('/course')">Tour Course</a></li>
+				<li><a href="#" class="nav-btn" onclick="importPage('/mate')">Tour Mate</a></li>
+				<li><a href="#" class="nav-btn" onclick="importPage('/content')">Content</a></li>
 			</ul>
 		</div>
 		<div class="user-info">
@@ -27,6 +28,7 @@
 			<div class="user-info-btn user-btn" id="userInfoDropBtn"></div>
 			<div class="user-info-btn len-btn"></div>
 		</div>
+		<div style="clear:both;"></div>
 		<div class="category-area">
 			<div class="category-btn"><span>호텔</span></div>
 			<div class="category-btn"><span>액티비티</span></div>
@@ -36,239 +38,7 @@
 			<div class="category-btn"><span>더 보기</span></div>
 		</div>
 	</div>
-	<div class="contents">
-		
-		<div class="search-area">
-			<div class="search-area-loc">
-				<span class="search-area-title">여행지역</span>
-				<input type="text" class="search-area-input input-loc" placeholder="여행지역을 입력해주세요."/>
-			</div>
-			<div class="search-area-loc">
-				<span class="search-area-title">여행 일정</span>
-				<input type="text" class="search-area-input input-date" placeholder="연도 · 월 · 일   |   연도 · 월 · 일"/>
-			</div>
-			<div class="search-area-loc">
-				<span class="search-area-title">인원</span>
-				<input type="text" class="search-area-input input-cnt" placeholder="인원"/>
-			</div>
-			<div class="search-btn"><span>Search</span></div>
-		</div>
-		<div class="result-solt-area">
-			<select class="result-solt-select">
-				<option>최신순</option>
-			</select>
-		</div>
-		<div class="result-area">
-			<div class="result-card">
-				<div class="result-card-img"></div>
-				<div class="result-card-text">
-					<span class="result-card-title">나만의 작은 숲 forest in love 숲속에</span>
-					<span class="result-card-loc">Changnyeong-eup, Changnyeong</span>
-					<span class="result-card-loc-kor">경상남도, 한국</span><br/>
-					<span class="result-card-like">조회 수</span>
-					<span class="result-card-like">1.0k</span>
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<span class="result-card-like">좋아요</span>
-					<span class="result-card-like">1.3k</span>
-				</div>
-			</div>
-			<div class="result-card">
-				<div class="result-card-img"></div>
-				<div class="result-card-text">
-					<span class="result-card-title">나만의 작은 숲 forest in love 숲속에</span>
-					<span class="result-card-loc">Changnyeong-eup, Changnyeong</span>
-					<span class="result-card-loc-kor">경상남도, 한국</span><br/>
-					<span class="result-card-like">조회 수</span>
-					<span class="result-card-like">1.0k</span>
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<span class="result-card-like">좋아요</span>
-					<span class="result-card-like">1.3k</span>
-				</div>
-			</div>
-			<div class="result-card">
-				<div class="result-card-img"></div>
-				<div class="result-card-text">
-					<span class="result-card-title">나만의 작은 숲 forest in love 숲속에</span>
-					<span class="result-card-loc">Changnyeong-eup, Changnyeong</span>
-					<span class="result-card-loc-kor">경상남도, 한국</span><br/>
-					<span class="result-card-like">조회 수</span>
-					<span class="result-card-like">1.0k</span>
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<span class="result-card-like">좋아요</span>
-					<span class="result-card-like">1.3k</span>
-				</div>
-			</div>
-			<div class="result-card">
-				<div class="result-card-img"></div>
-				<div class="result-card-text">
-					<span class="result-card-title">나만의 작은 숲 forest in love 숲속에</span>
-					<span class="result-card-loc">Changnyeong-eup, Changnyeong</span>
-					<span class="result-card-loc-kor">경상남도, 한국</span><br/>
-					<span class="result-card-like">조회 수</span>
-					<span class="result-card-like">1.0k</span>
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<span class="result-card-like">좋아요</span>
-					<span class="result-card-like">1.3k</span>
-				</div>
-			</div>
-			<div class="result-card">
-				<div class="result-card-img"></div>
-				<div class="result-card-text">
-					<span class="result-card-title">나만의 작은 숲 forest in love 숲속에</span>
-					<span class="result-card-loc">Changnyeong-eup, Changnyeong</span>
-					<span class="result-card-loc-kor">경상남도, 한국</span><br/>
-					<span class="result-card-like">조회 수</span>
-					<span class="result-card-like">1.0k</span>
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<span class="result-card-like">좋아요</span>
-					<span class="result-card-like">1.3k</span>
-				</div>
-			</div>
-			<div class="result-card">
-				<div class="result-card-img"></div>
-				<div class="result-card-text">
-					<span class="result-card-title">나만의 작은 숲 forest in love 숲속에</span>
-					<span class="result-card-loc">Changnyeong-eup, Changnyeong</span>
-					<span class="result-card-loc-kor">경상남도, 한국</span><br/>
-					<span class="result-card-like">조회 수</span>
-					<span class="result-card-like">1.0k</span>
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<span class="result-card-like">좋아요</span>
-					<span class="result-card-like">1.3k</span>
-				</div>
-			</div>
-			<div class="result-card">
-				<div class="result-card-img"></div>
-				<div class="result-card-text">
-					<span class="result-card-title">나만의 작은 숲 forest in love 숲속에</span>
-					<span class="result-card-loc">Changnyeong-eup, Changnyeong</span>
-					<span class="result-card-loc-kor">경상남도, 한국</span><br/>
-					<span class="result-card-like">조회 수</span>
-					<span class="result-card-like">1.0k</span>
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<span class="result-card-like">좋아요</span>
-					<span class="result-card-like">1.3k</span>
-				</div>
-			</div>
-			<div class="result-card">
-				<div class="result-card-img"></div>
-				<div class="result-card-text">
-					<span class="result-card-title">나만의 작은 숲 forest in love 숲속에</span>
-					<span class="result-card-loc">Changnyeong-eup, Changnyeong</span>
-					<span class="result-card-loc-kor">경상남도, 한국</span><br/>
-					<span class="result-card-like">조회 수</span>
-					<span class="result-card-like">1.0k</span>
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<span class="result-card-like">좋아요</span>
-					<span class="result-card-like">1.3k</span>
-				</div>
-			</div>
-			<div class="result-card">
-				<div class="result-card-img"></div>
-				<div class="result-card-text">
-					<span class="result-card-title">나만의 작은 숲 forest in love 숲속에</span>
-					<span class="result-card-loc">Changnyeong-eup, Changnyeong</span>
-					<span class="result-card-loc-kor">경상남도, 한국</span><br/>
-					<span class="result-card-like">조회 수</span>
-					<span class="result-card-like">1.0k</span>
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<span class="result-card-like">좋아요</span>
-					<span class="result-card-like">1.3k</span>
-				</div>
-			</div>
-			<div class="result-card">
-				<div class="result-card-img"></div>
-				<div class="result-card-text">
-					<span class="result-card-title">나만의 작은 숲 forest in love 숲속에</span>
-					<span class="result-card-loc">Changnyeong-eup, Changnyeong</span>
-					<span class="result-card-loc-kor">경상남도, 한국</span><br/>
-					<span class="result-card-like">조회 수</span>
-					<span class="result-card-like">1.0k</span>
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<span class="result-card-like">좋아요</span>
-					<span class="result-card-like">1.3k</span>
-				</div>
-			</div>
-			<div class="result-card">
-				<div class="result-card-img"></div>
-				<div class="result-card-text">
-					<span class="result-card-title">나만의 작은 숲 forest in love 숲속에</span>
-					<span class="result-card-loc">Changnyeong-eup, Changnyeong</span>
-					<span class="result-card-loc-kor">경상남도, 한국</span><br/>
-					<span class="result-card-like">조회 수</span>
-					<span class="result-card-like">1.0k</span>
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<span class="result-card-like">좋아요</span>
-					<span class="result-card-like">1.3k</span>
-				</div>
-			</div>
-			<div class="result-card">
-				<div class="result-card-img"></div>
-				<div class="result-card-text">
-					<span class="result-card-title">나만의 작은 숲 forest in love 숲속에</span>
-					<span class="result-card-loc">Changnyeong-eup, Changnyeong</span>
-					<span class="result-card-loc-kor">경상남도, 한국</span><br/>
-					<span class="result-card-like">조회 수</span>
-					<span class="result-card-like">1.0k</span>
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<span class="result-card-like">좋아요</span>
-					<span class="result-card-like">1.3k</span>
-				</div>
-			</div>
-			<div class="result-card">
-				<div class="result-card-img"></div>
-				<div class="result-card-text">
-					<span class="result-card-title">나만의 작은 숲 forest in love 숲속에</span>
-					<span class="result-card-loc">Changnyeong-eup, Changnyeong</span>
-					<span class="result-card-loc-kor">경상남도, 한국</span><br/>
-					<span class="result-card-like">조회 수</span>
-					<span class="result-card-like">1.0k</span>
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<span class="result-card-like">좋아요</span>
-					<span class="result-card-like">1.3k</span>
-				</div>
-			</div>
-			<div class="result-card">
-				<div class="result-card-img"></div>
-				<div class="result-card-text">
-					<span class="result-card-title">나만의 작은 숲 forest in love 숲속에</span>
-					<span class="result-card-loc">Changnyeong-eup, Changnyeong</span>
-					<span class="result-card-loc-kor">경상남도, 한국</span><br/>
-					<span class="result-card-like">조회 수</span>
-					<span class="result-card-like">1.0k</span>
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<span class="result-card-like">좋아요</span>
-					<span class="result-card-like">1.3k</span>
-				</div>
-			</div>
-			<div class="result-card">
-				<div class="result-card-img"></div>
-				<div class="result-card-text">
-					<span class="result-card-title">나만의 작은 숲 forest in love 숲속에</span>
-					<span class="result-card-loc">Changnyeong-eup, Changnyeong</span>
-					<span class="result-card-loc-kor">경상남도, 한국</span><br/>
-					<span class="result-card-like">조회 수</span>
-					<span class="result-card-like">1.0k</span>
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<span class="result-card-like">좋아요</span>
-					<span class="result-card-like">1.3k</span>
-				</div>
-			</div>
-			<div class="result-card">
-				<div class="result-card-img"></div>
-				<div class="result-card-text">
-					<span class="result-card-title">나만의 작은 숲 forest in love 숲속에</span>
-					<span class="result-card-loc">Changnyeong-eup, Changnyeong</span>
-					<span class="result-card-loc-kor">경상남도, 한국</span><br/>
-					<span class="result-card-like">조회 수</span>
-					<span class="result-card-like">1.0k</span>
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<span class="result-card-like">좋아요</span>
-					<span class="result-card-like">1.3k</span>
-				</div>
-			</div>
-		</div>
-	</div>
+	<div class="contents" id="contents"></div>
 	<div class="footer">
 
 	</div>
