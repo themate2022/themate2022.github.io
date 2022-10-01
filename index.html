@@ -1,47 +1,50 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>THE MATE MOCKUP PAGE</title>
-	<link href="./css/main.css" rel="styleSheet"/>
-	<script src="./js/main.js"></script>
-	<script src="./js/ajax.js"></script>
-</head>
-<body>
-<div class="wrapper">
-	<div class="header">
-		<div class="logo" onclick="importPage('/')">
-			<div class="logo-img">logo</div>
-			<h2>Themate</h2>
-		</div>
-		<div class="nav">
-			<ul>
-				<li><a href="#" class="nav-btn" onclick="importPage('/course')">Tour Course</a></li>
-				<li><a href="#" class="nav-btn" onclick="importPage('/mate')">Tour Mate</a></li>
-				<li><a href="#" class="nav-btn" onclick="importPage('/content')">Content</a></li>
-			</ul>
-		</div>
-		<div class="user-info">
-			<a href="#" class="user-info-mate">Mate 활동하기</a>
-			<div class="user-info-btn user-btn" id="userInfoDropBtn"></div>
-			<div class="user-info-btn len-btn"></div>
-		</div>
-		<div style="clear:both;"></div>
-		<div class="category-area">
-			<div class="category-btn"><span>호텔</span></div>
-			<div class="category-btn"><span>액티비티</span></div>
-			<div class="category-btn"><span>즐길거리</span></div>
-			<div class="category-btn"><span>음식점</span></div>
-			<div class="category-btn"><span>여행 포럼</span></div>
-			<div class="category-btn" onclick="importPage('/version')"><span>더 보기</span></div>
-		</div>
-	</div>
-	<div class="contents" id="contents"></div>
-	<div class="footer">
-
-	</div>
-</div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>THE MATE MOCKUP PAGE</title>
+    <link href="./css/main.css" rel="styleSheet" />
+    <script src="./js/main.js"></script>
+    <script src="./js/ajax.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header">
+        <div class="logo" onclick="importPage('/')">
+          <div class="logo-img" title="logo"></div>
+          <h2>Themate</h2>
+        </div>
+        <div class="nav">
+          <ul>
+            <li><a href="#" class="nav-btn" onclick="importPage('/course')">Tour Course</a></li>
+            <li><a href="#" class="nav-btn" onclick="importPage('/mate')">Tour Mate</a></li>
+            <li><a href="#" class="nav-btn" onclick="importPage('/content')">Content</a></li>
+          </ul>
+        </div>
+        <div class="user-info">
+          <a href="#" class="user-info-mate">Mate 활동하기</a>
+          <div class="user-info-btn user-btn" id="userInfoDropBtn"></div>
+          <div class="user-info-btn len-btn">
+            <div class="len-btn-l"></div>
+            <div class="len-btn-r">Ko</div>
+          </div>
+        </div>
+        <div style="clear: both"></div>
+        <div class="category-area">
+          <div class="category-btn"><span>호텔</span><img class="menu-ico" src="../public/playground_assets/vectori356-oqfm.svg" alt="VectorI356" /></div>
+          <div class="category-btn"><span>액티비티</span><img class="menu-ico" src="../public/playground_assets/framei356-elv.svg" alt="FrameI356" class="mac-book-pro162-frame" /></div>
+          <div class="category-btn"><span>즐길거리</span><img class="menu-ico" src="../public/playground_assets/framei356-ugf1.svg" alt="FrameI356" class="mac-book-pro162-frame1" /></div>
+          <div class="category-btn"><span>음식점</span><img class="menu-ico" src="../public/playground_assets/framei356-nokr.svg" alt="FrameI356" class="mac-book-pro162-frame2" /></div>
+          <div class="category-btn"><span>여행 포럼</span><img class="menu-ico" src="../public/playground_assets/framei356-7luo.svg" alt="FrameI356" /></div>
+          <div class="category-btn" onclick="importPage('/version')">
+            <span>더 보기</span><img class="menu-ico" src="public/playground_assets/framei356-zjri.svg" alt="FrameI356" class="mac-book-pro162-frame6" />
+          </div>
+        </div>
+      </div>
+      <div class="contents" id="contents"></div>
+      <div class="footer"></div>
+    </div>
+  </body>
 </html>
