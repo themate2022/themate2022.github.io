@@ -13,13 +13,14 @@ a {
   margin: 0 auto;
 }
 
-.header {
-  display: block;
-  position: fixed;
-  top: 0;
-  width: 1850px;
-  height: 180px;
-  background-color: #fff;
+.header{
+	display:block;
+	position:fixed;
+	top:0;
+	width:1850px;
+	height:180px;
+	background-color: #fff;
+	z-index: 9;
 }
 
 .logo {
