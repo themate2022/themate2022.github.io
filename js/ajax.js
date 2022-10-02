@@ -8,8 +8,8 @@ async function fetchHtmlAsText(url) {
 
 async function importPage(page) {
     let contents = document.getElementById('contents');
-    let html = await fetchHtmlAsText(getUrlPath(page));
     contents.classList.add('pre-animation');
+    let html = await fetchHtmlAsText(getUrlPath(page));
     setTimeout(function(){
         contents.innerHTML = html;
         contents.classList.remove('pre-animation');
